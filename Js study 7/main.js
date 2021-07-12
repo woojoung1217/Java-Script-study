@@ -17,4 +17,15 @@ iscontains=boxEl.classList.contains('active');
 
 console.log(iscontains);
 
+//  활용 
 
+let boxEl=document.querySelector('.box');
+
+boxEl.addEventListener('click', function(){
+  console.log('click!!');
+  boxEl.classList.add('active');
+  console.log(boxEl.classList.contains('active'));
+
+  boxEl.classList.remove('active');
+  console.log(boxEl.classList.contains('active'));
+});
