@@ -9,6 +9,12 @@ let iscontains=boxEl.classList.contains('active');
 //새로운 변수안에 boxEl 이 가진 클래스를 넣어주고 active라는 클래스가 들어갔는지 확인한다
 console.log(iscontains);  //true  출력 
 
+//삭제 
 
+boxEl.classList.remove('active');
+
+iscontains=boxEl.classList.contains('active');
+
+console.log(iscontains);
 
 
