@@ -1,4 +1,4 @@
-# ✨Java-Script-study1✨🐥
+# ✨Java-Script-study✨🐥
 
 
 #
