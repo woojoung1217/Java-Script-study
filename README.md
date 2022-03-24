@@ -1,2 +1,2 @@
-# ✨Java-Script-study7✨
+# ✨Java-Script-study✨
 
