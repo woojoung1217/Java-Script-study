@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./back.css">
+
+  <title>Document</title>
+</head>
+<body>
+
+  <ul class="menu">
+    <li>LET'S HAVE</li>
+    <li>SOME FUN</li> 
+    <li>THIS BEAT</li>
+    <li>IS SICK</li>
+    <li>I WANNA TAKE A RIDE</li>
+    <li>ON YOUR DISCO STICK</li>
+</ul>
+
+<div class="container">
+  <ul class="menu-mask">
+    <li>LET'S HAVE</li>
+    <li>SOME FUN</li>
+    <li>THIS BEAT</li>
+    <li>IS SICK</li>
+    <li>I WANNA TAKE A RIDE</li>
+    <li>ON YOUR DISCO STICK</li>
+  </ul>
+</div>
+<script>
+  const container = document.querySelector(".container");
+
+document.body.addEventListener("mousemove", e => {
+  const x = e.clientX;
+  const y = e.clientY - 35;
+  gsap.to(container, {
+    y: y
+  });
+  gsap.to(".menu-mask", {
+    y: -y
+  });
+});
+</script>
+
+</body>
+</html>

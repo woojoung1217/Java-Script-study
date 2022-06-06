@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <title>Document</title>
+</head>
+<body>
+  <div id="all">
+  <div class="alert-box" id="alert">
+    <p id="title">alertbox</p>
+    <button id="close">X</button>
+    <button id="worn">확인버튼</button>
+  </div>
+
+    <button id="open" >버튼1</button>
+    <button id="open2" >버튼2</button>
+   
+ 
+  </div>
+
+    <a href="./back.html">눌러봐</a>
+
+  <div id="newpage">
+    <button class="return" onclick="return1()">return</button>
+  </div>
+  <script>
+
+    var closeb = document.getElementById('close');
+    closeb.addEventListener('click',function(){
+        document.getElementById('alert').style.display='none';
+    });
+    
+    var openb = document.getElementById('open');
+    openb.addEventListener('click',function(){
+      document.getElementById('alert').style.display='block';
+      document.getElementById('title').innerHTML = ' 아이디를 입력하세요';
+    });
+
+    var openb2 = document.getElementById('open2');
+    openb2.addEventListener('click',function(){
+      document.getElementById('alert').style.display='block';
+      document.getElementById('title').innerHTML = ' 비밀번호를 입력하세요';
+    });
+
+    const openb3 = document.getElementById('open3');
+    openb3.addEventListener('click',function(){
+      document.getElementById('all').style.display='none';
+        document.getElementById('newpage').style.display='block';
+
+       
+    });
+    function return1(){
+          document.getElementById('all').style.display= 'block';
+          document.getElementById('newpage').style.display='none';
+    }
+    
+    
+
+
+  </script>
+</body>
+</html>

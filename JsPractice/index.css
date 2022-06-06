@@ -1,0 +1,19 @@
+.alert-box{
+  width:700px;
+  height: 90px;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  display: block;
+}
+
+#all{
+  display: block;
+}
+
+#newpage{
+  width: 500px;
+  height: 500px;
+  background-color: aqua;
+  display: none;
+}
