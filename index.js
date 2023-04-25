@@ -101,17 +101,127 @@
 // }
 // agecheck(16);
 
-// 전역 함수로 만들기
-// 함수를 전역에 노출시키는 방법
-globalThis.AgeCheck = (ages) => {
-  if (ages > 19) {
-    return "성인";
-  } else {
-    return "미성년자";
-  }
-};
-const ReturnName = () => {
-  let name = "나는 윤우중";
-  console.log(name, AgeCheck(20), "입니다.");
-};
-ReturnName();
+// // 전역 함수로 만들기
+// // 함수를 전역에 노출시키는 방법
+// globalThis.AgeCheck = (ages) => {
+//   if (ages > 19) {
+//     return "성인";
+//   } else {
+//     return "미성년자";
+//   }
+// };
+// const ReturnName = () => {
+//   let name = "나는 윤우중";
+//   console.log(name, AgeCheck(20), "입니다.");
+// };
+// ReturnName();
+
+// 논리 연산자 or , and ,not
+
+// let people = {
+//   name: "yoon",
+//   sex: "male",
+//   age: 30,
+// };
+
+// if (people.name == "yoon" && people.sex == "male") {
+//   console.log("통과");
+// } else {
+//   console.log("실패");
+// } // 통과 2 조건 모두 true
+// if (people.name == "yoon" && people.sex == "female") {
+//   console.log("통과");
+// } else {
+//   console.log("실패");
+// }
+// // 실패 => 두 조건중 하나가 false
+
+// if (people.name == "yoon" || people.sex == "male") {
+//   console.log("통과");
+// } else {
+//   console.log("실패");
+// } //통과 둘중하나만 pass 해도 true
+
+// if (people.name != "demon") {
+//   console.log("이름이 달라요");
+// } else {
+//   console.log("통과");
+// }
+
+// const gender = "F";
+// const name = "jane";
+// const isAdult = true;
+// // and 가 우선순위가 높아서 발생하는 문제가 있음
+
+// if (gender === "M" && (name === "Mike" || isAdult)) {
+//   console.log(`통과`);
+// } else {
+//   console.log("돌아가");
+// }
+
+// for , while ,switch
+// 1~10 까지 콘솔 찍기
+
+// for (let i = 0; i < 10; i += 1) {
+//   console.log(i + 1);
+// }
+
+// while
+// let i = 1;
+// while (i < 11) {
+//   console.log(i);
+//   i += 1;
+// }
+
+// for (let i = 1; i <= 10; i++) {
+//   switch (i) {
+//     case 1:
+//       console.log("1");
+//       break;
+//     case 2:
+//       console.log("2");
+//       break;
+//     case 3:
+//       console.log("3");
+//       break;
+//     case 4:
+//       console.log("4");
+//       break;
+//     case 5:
+//       console.log("5");
+//       break;
+//     case 6:
+//       console.log("6");
+//       break;
+//     case 7:
+//       console.log("7");
+//       break;
+//     case 8:
+//       console.log("8");
+//       break;
+//     case 9:
+//       console.log("9");
+//       break;
+//     case 10:
+//       console.log("10");
+//       break;
+//     default:
+//       console.log("Error");
+//       break;
+//   }
+// }
+// break
+
+// while (true) {
+//   let answer = confirm("계속 ㄱ?");
+//   if (false) {
+//     break;
+//   }
+// }
+
+// for (let i = 0; i < 10; i += 1) {
+//   if (i % 2 == 1) {
+//     continue;
+//   }
+//   console.log(i);
+// }
