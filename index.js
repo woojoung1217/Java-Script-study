@@ -225,3 +225,106 @@
 //   }
 //   console.log(i);
 // }
+
+// function
+// // JavaScript 코드
+// const signupForm = document.getElementById("signup-form");
+
+// signupForm.addEventListener("submit", function (event) {
+//   event.preventDefault(); // 폼 전송을 막음
+
+//   const username = document.getElementById("username").value;
+//   const password = document.getElementById("password").value;
+//   const passwordConfirm = document.getElementById("password-confirm").value;
+
+//   if (password !== passwordConfirm) {
+//     alert("비밀번호와 비밀번호 확인이 일치하지 않습니다.");
+//     return;
+//   }
+
+//   // 여기서는 간단히 새로운 사용자를 생성하고 로컬 스토리지에 저장합니다.
+//   const newUser = {
+//     username: username,
+//     password: password,
+//   };
+//   localStorage.setItem(username, JSON.stringify(newUser));
+
+//   alert("회원 가입이 완료되었습니다.");
+// });
+
+// // JavaScript 코드
+// const loginForm = document.getElementById("login-form");
+
+// loginForm.addEventListener("submit", function (event) {
+//   event.preventDefault(); // 폼 전송을 막음
+
+//   const username = document.getElementById("username").value;
+//   const password = document.getElementById("password").value;
+
+//   // 로컬 스토리지에서 해당 아이디의 정보를 가져옴
+//   const user = JSON.parse(localStorage.getItem(username));
+
+//   if (user && user.password === password) {
+//     alert("로그인 성공!");
+//     // 로그인 성공 시 처리할 코드를 작성
+//   } else {
+//     alert("아이디 또는 비밀번호가 일치하지 않습니다.");
+//     // 로그인 실패 시 처리할 코드를 작성
+//   }
+// });
+
+// arrrow function
+
+// function addbase(n1, n2) {
+//   return n1 + n2;
+// }
+
+//대체 가능 return 이 있다면 {} 생략 가능
+// // 매개변수가 하나라면 () 도 생략가능
+// let add = (num1, num2) => num1 + num2;
+
+// const superMan = {
+//   name: "clark",
+//   age: 33,
+// };
+
+// console.log(superMan.name);
+// console.log(superMan["age"]);
+
+// delete superMan.age;
+
+// console.log(superMan);
+
+// superMan.color = "black";
+// console.log(superMan);
+
+// let woojoung = {
+//   name: "yoon",
+//   age: 26,
+// };
+// let hesun = {
+//   name: "jeon",
+// };
+
+// function isAdult(user) {
+//   if (user.age > 19) {
+//     return "성인";
+//   } else if (!("age" in user)) {
+//     return "나이 값 없음";
+//   } else {
+//     return "미자";
+//   }
+// }
+
+// console.log(isAdult(woojoung));
+// console.log(isAdult(hesun));
+
+const superman = {
+  name: "clark",
+  age: 30,
+  fly() {
+    console.log("날아간당.");
+  },
+};
+
+console.log(superman.fly());
