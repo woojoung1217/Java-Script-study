@@ -319,12 +319,80 @@
 // console.log(isAdult(woojoung));
 // console.log(isAdult(hesun));
 
-const superman = {
-  name: "clark",
+// const superman = {
+//   name: "clark",
+//   age: 30,
+//   test: function () {
+//     console.log("hello" + "   " + this.name);
+//   },
+// };
+// superman.test();
+
+// array
+
+// let days = ["mon", "tue", "wed"];
+// console.log(days);
+// days.shift("월");
+// console.log(days);
+// days.unshift("wed");
+// console.log(days);
+
+/// javascript 변수 TDZ
+
+// var = > 선언하기 전에 사용 될 수 있다.
+// var name ;
+// console.log(name) // undefined 반환
+// name = "mike"
+
+// let 과 const temporal dead zone 에 영향을 받지만 var 는 영향을 받지 않음
+
+// 생성자 함수
+// function User(name, age) {
+//   this.name = name;
+//   this.age = age;
+//   this.sayName = function () {
+//     console.log(this.name);
+//   };
+// }
+// let user1 = new User("mike", 30);
+// let user2 = new User("jane", 32);
+// let user3 = new User("sera", 31);
+
+// user3.sayName();
+
+// ex 2
+
+// function Item(title, price) {
+//   this.title = title;
+//   this.price = price;
+//   this.showPrice = function () {
+//     console.log(` 상품은 ${title} 가격은 ${price}원 입니다.`);
+//   };
+// }
+// const item1 = new Item("인형", 3000);
+// const item2 = new Item("가방", 4000);
+// const item3 = new Item("지갑", 9000);
+
+// console.log(item1, item2, item3);
+// item3.showPrice();
+
+// computed property
+
+// let a = "age";
+// const user = {
+//   name: "mike",
+//   [a]: 30,
+// };
+
+// object property
+
+// object.assign() => 객체 복제
+
+let user = {
+  name: "mike",
   age: 30,
-  fly() {
-    console.log("날아간당.");
-  },
 };
 
-console.log(superman.fly());
+let newitems = Object.assign({ gender: "male" }, user);
+console.log(user);
+console.log(newitems);
