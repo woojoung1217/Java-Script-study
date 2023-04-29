@@ -1,0 +1,717 @@
+// javascript basic
+
+// 자바스크립트 기초 복습
+
+//boolean
+// const a = true;
+// const b = false;
+
+// const name = "mike";
+// const age = 30;
+
+// console.log(name == "mike");
+// console.log(age > 40);
+
+// typeof
+
+// console.log(typeof true);
+// console.log(typeof 3);
+// console.log(typeof null);
+// // null 타입은 Object = > js 초기 오류
+// console.log(typeof " 자바 ");
+
+// 문자열 출력 방식
+// const a = " 나는 ";
+// const b = " 입니다.";
+
+// const name = "mike";
+
+// console.log(a + name + b);
+// console.log(`${a}${name}${b}`);
+
+// alert , prompt , confirm
+
+// 사용자에게 입력을 받을 때 사용하는 prompt
+// const name = prompt("이름을 입력하세요");
+// if (name == "yoon") {
+//   alert(`${name}` + "님" + "환영합니다.");
+// } else {
+//   alert("다시 시도해주세요");
+// }
+
+// ex 2 prompt
+// const date = prompt("예약일을 입력해주세요 ", "2023-11-");
+// 인자로 설명 값 을 넣을 수 있다
+
+// ex 3 confirm
+
+// const isAdult = confirm("당신은 성인 입니까>");
+// console.log(isAdult);
+// 단점 = > 1. 스크립트 일시정지(동작제한), 2 스타일링 불가 (복잡 & 브라우저 호환성)
+
+// type 형변환 Number , String , Boolean
+// let datas = ["1", "2", "3"];
+// Number
+
+// for (let i = 0; i < datas.length; i += 1) {
+//   datas[i] = Number(datas[i]);
+//   console.log(datas[i]);
+//   console.log(" 타입은 : " + typeof datas[i]);
+// }
+
+// const math = prompt("수학");
+// const eng = prompt("영어");
+// const result = (parseInt(math) + parseInt(eng)) / 2;
+// console.log(result);
+
+// Stirng 형 변환
+
+// console.log(typeof String(3));
+// console.log(typeof String(null));
+// let a = [1, 2, 3, 4, 5, 6];
+// for (let i = 0; i < a.length; i += 1) {
+//   a[i] = String(a[i]);
+//   setTimeout(() => {
+//     console.log(a[i]);
+//   }, 1000 * i);
+// }
+
+// 배열안에서 홀수 찾는 방법
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// const multiplesOfThree = arr.filter((num, i) => i % 2 === 1);
+
+// console.log(multiplesOfThree); // [1,3,5,7,9]
+
+// <비교연산자>
+
+// let a = "3";
+// let b = 3;
+// console.log(a == b); // true 반환
+// // 타입 까지 반환 => ===
+
+// function agecheck(age, ages) {
+//   ages = 0;
+//   if (age > 19) {
+//     ages += 1;
+//     console.log("adult", ages);
+//   } else {
+//     console.log("kids", ages);
+//   }
+// }
+// agecheck(16);
+
+// // 전역 함수로 만들기
+// // 함수를 전역에 노출시키는 방법
+// globalThis.AgeCheck = (ages) => {
+//   if (ages > 19) {
+//     return "성인";
+//   } else {
+//     return "미성년자";
+//   }
+// };
+// const ReturnName = () => {
+//   let name = "나는 윤우중";
+//   console.log(name, AgeCheck(20), "입니다.");
+// };
+// ReturnName();
+
+// 논리 연산자 or , and ,not
+
+// let people = {
+//   name: "yoon",
+//   sex: "male",
+//   age: 30,
+// };
+
+// if (people.name == "yoon" && people.sex == "male") {
+//   console.log("통과");
+// } else {
+//   console.log("실패");
+// } // 통과 2 조건 모두 true
+// if (people.name == "yoon" && people.sex == "female") {
+//   console.log("통과");
+// } else {
+//   console.log("실패");
+// }
+// // 실패 => 두 조건중 하나가 false
+
+// if (people.name == "yoon" || people.sex == "male") {
+//   console.log("통과");
+// } else {
+//   console.log("실패");
+// } //통과 둘중하나만 pass 해도 true
+
+// if (people.name != "demon") {
+//   console.log("이름이 달라요");
+// } else {
+//   console.log("통과");
+// }
+
+// const gender = "F";
+// const name = "jane";
+// const isAdult = true;
+// // and 가 우선순위가 높아서 발생하는 문제가 있음
+
+// if (gender === "M" && (name === "Mike" || isAdult)) {
+//   console.log(`통과`);
+// } else {
+//   console.log("돌아가");
+// }
+
+// for , while ,switch
+// 1~10 까지 콘솔 찍기
+
+// for (let i = 0; i < 10; i += 1) {
+//   console.log(i + 1);
+// }
+
+// while
+// let i = 1;
+// while (i < 11) {
+//   console.log(i);
+//   i += 1;
+// }
+
+// for (let i = 1; i <= 10; i++) {
+//   switch (i) {
+//     case 1:
+//       console.log("1");
+//       break;
+//     case 2:
+//       console.log("2");
+//       break;
+//     case 3:
+//       console.log("3");
+//       break;
+//     case 4:
+//       console.log("4");
+//       break;
+//     case 5:
+//       console.log("5");
+//       break;
+//     case 6:
+//       console.log("6");
+//       break;
+//     case 7:
+//       console.log("7");
+//       break;
+//     case 8:
+//       console.log("8");
+//       break;
+//     case 9:
+//       console.log("9");
+//       break;
+//     case 10:
+//       console.log("10");
+//       break;
+//     default:
+//       console.log("Error");
+//       break;
+//   }
+// }
+// break
+
+// while (true) {
+//   let answer = confirm("계속 ㄱ?");
+//   if (false) {
+//     break;
+//   }
+// }
+
+// for (let i = 0; i < 10; i += 1) {
+//   if (i % 2 == 1) {
+//     continue;
+//   }
+//   console.log(i);
+// }
+
+// function
+// // JavaScript 코드
+// const signupForm = document.getElementById("signup-form");
+
+// signupForm.addEventListener("submit", function (event) {
+//   event.preventDefault(); // 폼 전송을 막음
+
+//   const username = document.getElementById("username").value;
+//   const password = document.getElementById("password").value;
+//   const passwordConfirm = document.getElementById("password-confirm").value;
+
+//   if (password !== passwordConfirm) {
+//     alert("비밀번호와 비밀번호 확인이 일치하지 않습니다.");
+//     return;
+//   }
+
+//   // 여기서는 간단히 새로운 사용자를 생성하고 로컬 스토리지에 저장합니다.
+//   const newUser = {
+//     username: username,
+//     password: password,
+//   };
+//   localStorage.setItem(username, JSON.stringify(newUser));
+
+//   alert("회원 가입이 완료되었습니다.");
+// });
+
+// // JavaScript 코드
+// const loginForm = document.getElementById("login-form");
+
+// loginForm.addEventListener("submit", function (event) {
+//   event.preventDefault(); // 폼 전송을 막음
+
+//   const username = document.getElementById("username").value;
+//   const password = document.getElementById("password").value;
+
+//   // 로컬 스토리지에서 해당 아이디의 정보를 가져옴
+//   const user = JSON.parse(localStorage.getItem(username));
+
+//   if (user && user.password === password) {
+//     alert("로그인 성공!");
+//     // 로그인 성공 시 처리할 코드를 작성
+//   } else {
+//     alert("아이디 또는 비밀번호가 일치하지 않습니다.");
+//     // 로그인 실패 시 처리할 코드를 작성
+//   }
+// });
+
+// arrrow function
+
+// function addbase(n1, n2) {
+//   return n1 + n2;
+// }
+
+//대체 가능 return 이 있다면 {} 생략 가능
+// // 매개변수가 하나라면 () 도 생략가능
+// let add = (num1, num2) => num1 + num2;
+
+// const superMan = {
+//   name: "clark",
+//   age: 33,
+// };
+
+// console.log(superMan.name);
+// console.log(superMan["age"]);
+
+// delete superMan.age;
+
+// console.log(superMan);
+
+// superMan.color = "black";
+// console.log(superMan);
+
+// let woojoung = {
+//   name: "yoon",
+//   age: 26,
+// };
+// let hesun = {
+//   name: "jeon",
+// };
+
+// function isAdult(user) {
+//   if (user.age > 19) {
+//     return "성인";
+//   } else if (!("age" in user)) {
+//     return "나이 값 없음";
+//   } else {
+//     return "미자";
+//   }
+// }
+
+// console.log(isAdult(woojoung));
+// console.log(isAdult(hesun));
+
+// const superman = {
+//   name: "clark",
+//   age: 30,
+//   test: function () {
+//     console.log("hello" + "   " + this.name);
+//   },
+// };
+// superman.test();
+
+// array
+
+// let days = ["mon", "tue", "wed"];
+// console.log(days);
+// days.shift("월");
+// console.log(days);
+// days.unshift("wed");
+// console.log(days);
+
+/// javascript 변수 TDZ
+
+// var = > 선언하기 전에 사용 될 수 있다.
+// var name ;
+// console.log(name) // undefined 반환
+// name = "mike"
+
+// let 과 const temporal dead zone 에 영향을 받지만 var 는 영향을 받지 않음
+
+// 생성자 함수
+// function User(name, age) {
+//   this.name = name;
+//   this.age = age;
+//   this.sayName = function () {
+//     console.log(this.name);
+//   };
+// }
+// let user1 = new User("mike", 30);
+// let user2 = new User("jane", 32);
+// let user3 = new User("sera", 31);
+
+// user3.sayName();
+
+// ex 2
+
+// function Item(title, price) {
+//   this.title = title;
+//   this.price = price;
+//   this.showPrice = function () {
+//     console.log(` 상품은 ${title} 가격은 ${price}원 입니다.`);
+//   };
+// }
+// const item1 = new Item("인형", 3000);
+// const item2 = new Item("가방", 4000);
+// const item3 = new Item("지갑", 9000);
+
+// console.log(item1, item2, item3);
+// item3.showPrice();
+
+// computed property
+
+// let a = "age";
+// const user = {
+//   name: "mike",
+//   [a]: 30,
+// };
+
+// object property
+
+// object.assign() => 객체 복제
+
+// let user = {
+//   name: "mike",
+//   age: 30,
+//   gender: "female",
+// };
+// let newitems = Object.assign({ gender: "male" }, user);
+// console.log(user);
+// console.log(newitems);
+
+// object.keys() => 키 값만 배열로 반환
+
+// object.entries => 키 / 배열 모두 반환
+
+// let test = Object.entries(user);
+// let test2 = Object.values(user);
+
+// console.log(test);
+// console.log(test2);
+
+// symbol  = 유일한 식별자 , 유일성 보장
+
+// const id = Symbol("id");
+
+// const user = {
+//   name: "mike",
+//   age: 30,
+//   [id]: "myid",
+// };
+
+// --------------------------------------------------------------------------------------------
+
+// Number ,Math
+
+// let numdata = 30.2312314;
+
+// numdata.toFixed(2);
+// console.log(numdata);
+// 소숫점 둘쨰 자리까지 출력
+
+// sqrt , random  pow 등
+
+// String method
+
+// let id = "Dnwnd1217";
+// console.log(id.length);
+// if (id[0] === id[0].toUpperCase()) {
+//   console.log("The first letter is uppercase.");
+// } else {
+//   console.log("The first letter is not uppercase.");
+// }
+
+// let str = "abcedf";
+
+// let str2 = str.slice(0,);
+// console.log(str2);
+
+// let list = [
+//   "01. 들어가며",
+//   "02. JS의 역사",
+//   "03. 자료형",
+//   "04. 배열",
+//   "05. 함수",
+// ];
+
+// for (let i = 0; i < list.length; i += 1) {
+//   let newlist = list[i].slice(3);
+//   console.log(newlist);
+// }
+
+// function hascola(str) {
+//   if (str.indexOf("콜라") > -1) {
+//     console.log("금지어가 있습니다.");
+//   } else {
+//     console.log("통과");
+//   }
+// }
+// hascola("와 사이다가 짱이야");
+// hascola("콜라는 맛있어");
+
+// array method
+
+// let arr = [1, 2, 3, 4, 5];
+
+// arr.splice(1, 3);
+// // 2,3,4 가 지워짐
+// console.log(arr);
+
+// 6자리의 1~10 까지의 랜던함 숫자를 뽑는 다
+
+// function ranDomNum() {
+//   let arr = [];
+
+//   while (arr.length < 6) {
+//     let num = Math.floor(Math.random() * 45) + 1;
+//     if (!arr.includes(num)) {
+//       arr.push(num);
+//     }
+//   }
+//   console.log(arr);
+// }
+
+// ranDomNum();
+
+// function random() {
+//   let arr = [];
+//   for (let i = 0; i < 6; i += 1) {
+//     let chosen = Math.floor(Math.random() * 9 + 1);
+//     if (!arr.includes(chosen)) {
+//       arr.push(chosen);
+//     } else {
+//       i = i - 1;
+//     }
+//   }
+//   console.log(arr);
+// }
+
+// random();
+
+// reduce
+// let arr = [1, 2, 3, 4, 5];
+// let result = 0;
+// arr.forEach((num) => {
+//   result = result + num;
+// });
+// console.log(result);
+
+// const result = arr.reduce((prev, cur) => {
+//   return prev + cur;
+// }, 0);
+// console.log(result);
+
+// let userlist = [
+//   {
+//     name: "mike",
+//     age: 30,
+//   },
+//   {
+//     name: "jane",
+//     age: 10,
+//   },
+//   {
+//     name: "woojo",
+//     age: 26,
+//   },
+//   {
+//     name: "jo",
+//     age: 6,
+//   },
+//   {
+//     name: "kio",
+//     age: 18,
+//   },
+// ];
+
+// let result = userlist.reduce((prev, cur) => {
+//   if (cur.name.length === 3) {
+//     prev.push(cur.name);
+//   }
+//   return prev;
+// }, []);
+
+// console.log(result);
+
+// 구조 분해 할당
+
+// 배열
+
+// let users = ["mike", "jake", "woojoung"];
+// let [user1, user2, user3] = users;
+
+// 객체
+
+// let user = { name: "mike", age: 30 };
+// let { name, age } = user;
+
+// function add(...numbers) {
+//   let result = 0;
+//   numbers.forEach((num) => {
+//     return (result += num);
+//   });
+//   console.log(result);
+// }
+
+// console.log(add(1, 2, 3, 4));
+// console.log(add(1, 4));
+// console.log(add(1, 3));
+
+// function User(name, age, ...skills) {
+//   this.name = name;
+//   this.age = age;
+//   this.skills = skills;
+// }
+
+// const user1 = new User("mike", 30, "html", "css");
+// const user2 = new User("dak", 30, "react");
+
+// console.log(user1);
+// console.log(user2);
+
+// 전개구문
+
+// let arr = [1, 2, 3];
+// let arr2 = [...arr];
+
+// let user = { name: "mike", age: 39 };
+// let user2 = { ...user };
+
+// user2.name = "Tom";
+
+// settimeout , setinterval
+
+// let num = 0;
+
+// function showtime() {
+//   console.log(`접속하신지 ${num++}초 가 지났습니다,`);
+//   if (num >= 6) {
+//     console.log("refresh");
+//     return (num = 0);
+//   }
+// }
+// setInterval(() => {
+//   showtime();
+// }, 1000);
+
+// call 어느 함수에서든 사용가능한메소드 this 를 특정값을 지정가능
+// const mike = {
+//   name: "mike",
+// };
+// const tom = {
+//   name: "tom",
+// };
+
+// function showName() {
+//   console.log(this.name);
+// }
+// showName.call(mike);
+// showName.call(tom);
+
+// function Update(birthyear, job) {
+//   this.birthyear = birthyear;
+//   this.job = job;
+// }
+
+// Update.call(mike, 1998, "director");
+// Update.call(tom, 2000, "drug");
+// apply
+
+// // prototype
+
+// const car = {
+//   wheels: 4,
+//   license: "2auto",
+//   drive() {
+//     console.log("drive");
+//   },
+// };
+
+// const bmw = {
+//   color: "black",
+// };
+
+// bmw.__proto__ = car;
+
+// console.log(bmw.color);
+// console.log(bmw.wheels);
+// console.log(bmw.license);
+
+// for (x in bmw) {
+//   console.log(x);
+// }
+
+// const User = function (name, age) {
+//   this.name = name;
+//   this.age = age;
+// };
+
+// User.prototype.showName = function () {
+//   console.log(this.name);
+// };
+
+// const user1 = new User("woojoung", 23);
+
+// class
+
+// class User2 {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+//   showName() {
+//     console.log(" => " + this.name);
+//   }
+// }
+
+// const Tom = new User2("Tom", 19);
+
+// for (let p in user1) {
+//   console.log(p);
+// }
+// for (let i in Tom) {
+//   console.log(i);
+// }
+
+// extends
+
+// class Car {
+//   constructor(color) {
+//     this.color = color;
+//     this.wheels = 4;
+//   }
+//   drive() {
+//     console.log(this.color + "drive");
+//   }
+//   stop() {
+//     console.log("STOP");
+//   }
+// }
+
+// class bmw extends Car {
+//   constructor() {
+//     super();
+//     this.navigation = 1;
+//   }
+//   park() {
+//     console.log("PARK");
+//   }
+// }
